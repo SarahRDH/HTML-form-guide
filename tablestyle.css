@@ -1,0 +1,91 @@
+table, 
+th, 
+td {       
+        border-radius: 5px;
+        padding: 5px;
+}
+table {
+        margin-top: 5%;
+        margin-right: 15%;
+        margin-left: 10%;
+        width: 80%;
+        height: 80%;
+        line-height: 25px;
+}
+body {
+        background-color: whitesmoke;
+        font-family: Arial;
+}
+h1 {
+        color: rgb(138, 192, 192);
+        font-variant-caps: all-small-caps;
+        font-size: 70px;
+        text-align: center;
+        background-color: gray;
+        border-block-start-style: inset;
+        border-radius: 5px;
+        padding: 60px;
+}
+.table-title {
+        text-align: center;
+}
+td {
+        color: white;
+        text-align: center;
+        background-color: darkcyan;        
+}
+th {
+        padding: 30px;
+        background-color: rgb(138, 192, 192);
+}
+tbody>tr>:nth-child(4)
+{
+    text-align:left;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-family: Lucida Console;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+   
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Tooltip arrow 
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }*/
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  

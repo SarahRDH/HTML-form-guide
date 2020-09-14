@@ -1,0 +1,349 @@
+<html> 
+  <head>
+    <title>HTML and CSS Cheat Sheet</title> 
+    <link rel="stylesheet" type="text/css" href="tablestyle.css">
+    <table>
+  </head>
+
+  <body> 
+    <h1>Making a Form in HTML</h1> 
+    <h2 class="table-title">Quick Reference Chart</h2>
+      <thead>
+          <tr>
+            <th scope="col" class="tags-col">TAGS</th>
+            <th scope="col" class="attributes-col">ATTRIBUTES</th>
+            <th scope="col" class="values-col">VALUES</th>
+            <th scope="col" class="description-col">DESCRIPTION</th>
+            <th scope="col" class="example-col">EXAMPLES</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr id="input">
+            <td>&ltinput&gt<br>&ltbr&gt</td>
+            <td>type=<br>name=<br>list=<br>id=<br>min=<br>max=<br>step=<br>pattern=<br>title=<br></td>
+            <td>"text"<br>"number"<br>"submit"<br>"radio"<br>"checkbox"<br>"select"<br>"button"<br>"AnythingYouWant"<br></td>
+            <td>Gives the user an opportunity to provide information which is determined by the parameters that follow the &ltinput&gt tag.<br>
+              The HTML &ltinput&gt element is used to render a variety of input fields on a webpage including text fields, checkboxes, buttons, etc.<br>
+              &ltinput&gt element have a type attribute that determines how it gets rendered to a page.<br>
+              By including "submit", a submit button will be rendered on the webpage.<br>
+              The data will not be sent correctly unless the Key/Value pair is set up properly. <br>
+              The KEY is the name="xyz" of the &ltinput&gt. The VALUE is whatever the user entered for that question on the form.<br>
+              This is how the server connects the user's answers to the appropriate questions.</td>
+            <td>
+              <div class="tooltip"><br><p class="tooltiptext">&ltinput type="checkbox" name="breakfast" value="bacon"&gtBacon&ltbr&gt<br>
+              &ltinput type="checkbox" name="breakfast" value="eggs"&gtEggs&ltbr&gt</p>
+                <form>
+                  <input type="checkbox" name="breakfast" value="bacon">Bacon<br>
+                  <input type="checkbox" name="breakfast" value="eggs">Eggs<br>
+                </form>
+              </div>
+            </td>
+          </tr>
+          <tr id="input-type">
+            <td colspan="3" style="text-align:center;">
+              &ltinput type="button"&gt<br>
+              &ltinput type="checkbox"&gt<br>
+              &ltinput type="color"&gt<br>
+              &ltinput type="date"&gt<br>
+              &ltinput type="datetime-local"&gt<br>
+              &ltinput type="email"&gt<br>
+              &ltinput type="file"&gt<br>
+              &ltinput type="hidden"&gt<br>
+              &ltinput type="image"&gt<br>
+              &ltinput type="month"&gt<br>
+              &ltinput type="number"&gt<br>
+              &ltinput type="password"&gt<br>
+              &ltinput type="radio"&gt<br>
+              &ltinput type="range"&gt<br>
+              &ltinput type="reset"&gt<br>
+              &ltinput type="search"&gt<br>
+              &ltinput type="submit"&gt<br>
+              &ltinput type="tel"&gt<br>
+              &ltinput type="text"&gt<br>
+              &ltinput type="time"&gt<br>
+              &ltinput type="url"&gt<br>
+              &ltinput type="week"&gt</td>
+            <td style="text-align:left">Gives the user an opportunity to provide information which is determined by the parameters that follow the &ltinput&gt tag.<br>
+                The HTML &ltinput&gt element is used to render a variety of input fields on a webpage including text fields, checkboxes, buttons, etc. <br>
+                &ltinput&gt elements have a type attribute that determines how it gets rendered to a page. <br>
+                By including "submit", a submit button will be rendered on the webpage. <br>
+                The data will not be sent correctly unless the Key/Value pair is set up properly. <br>
+                The KEY is the name="xyz" of the &ltinput&gt. The VALUE is whatever the user entered for that question on the form. <br>
+                This is how the server connects the user's answers to the appropriate questions.</td>
+            <td style="text-align:left">
+              <form>
+                <input type="button">Button<br>
+                <input type="checkbox">Checkbox<br>
+                <input type="color">Color<br>
+                <input type="date">Date<br>
+                <input type="datetime-local">Local Date-Time<br>
+                <input type="email">Email<br>
+                <input type="file">File<br>
+                <input type="hidden">Hidden<br>
+                <input type="image">Image<br>
+                <input type="month">Month<br>
+                <input type="number">Number<br>
+                <input type="password">Password<br>
+                <input type="radio">Radio<br>
+                <input type="range">Range<br>
+                <input type="reset">Reset<br>
+                <input type="search">Search<br>
+                <input type="submit">Submit<br>
+                <input type="tel">Tel<br>
+                <input type="text">Text<br>
+                <input type="time">Time<br>
+                <input type="url">url<br>
+                <input type="week">Week<br>
+              </form>
+            </td>
+          </tr>          
+          <tr id="form">
+            <td>&ltform&gt&lt/form&gt</td>
+            <td>method=<br>action=<br>target=<br>oninput=</td>
+            <td>"post"<br>"get"<br>"put"<br>"delete"<br>"http://exampleserver1"<br>"_blank"<br>"_self"<br>"_parent"<br>"_top"<br></td>
+            <td>Use the "post" method for large amounts of data that may contain sensitive information. <br>
+                Use the "get" method for limited quantities of data that are not secure. <br>
+                Get is the default setting in a form and the data will be visible in the URL. <br>
+                Use GET for retrieving / viewing information (such as entering a search request into a text box in order to view static posts from other users) and POST for creating / editing information (such as having a user complete a questionnaire with unique answers for each user). <br>
+                The method is how the servers communicate with each other. <br>
+                The action is the address of the server that will receive the user's data. <br>
+                The target="value" determines where the form results or submission success page will land.</td>
+            <td>&ltform method="post" action="http://exampleserver1"&gt</td>
+          </tr>
+          <tr id="label">
+            <td>&ltlabel&gt&lt/label&gt</td>
+            <td>for=</td>
+            <td>"AnythingSameAsInputID"</td>
+            <td>The value of the label will be displayed next to the form textbox or question. <br>
+                Labels communicate with the input id and should say the same thing so that they can be linked together.</td>   
+            <td> 
+              <div class="tooltip"><br><p class="tooltiptext">&ltlabel for="peas"&gtDo you like peas?&lt/label&gt
+              &ltinput type="checkbox" name="peas" id="peas"&gt</p>
+                <label for="peas">Do you like peas?             
+                </label>
+                <input type="checkbox" name="peas" id="peas"><br><br>
+              </div>
+              <div class="tooltip"><p class="tooltiptext">&ltlabel&gtDo you like peas?<br>
+                  &ltinput type="checkbox" name="peas"&gt
+                  &lt/label&gt</p>
+                <label>Do you like peas? 
+                <input type="checkbox" name="peas"> 
+                </label><br>
+              </div>
+            </td>
+          </tr>
+          <tr id="select">
+            <td>&ltselect&gt&lt/select&gt</td>
+            <td>id=<br> name=<br> size=<br> multiple=<br></td>
+            <td>"anything"<br>"n"</td>
+            <td> Select will render a visible vertical list of choices which the user can select one, or multiple depending on the parameter. <br>
+                 Size will determine how many items are visible to user. <br>
+                 Multiple will allow user to select more than one item.</td>          
+            <td>
+              <div class="tooltip"><br><p class="tooltiptext">&ltlabel for="cars"&gtChoose a car:&lt/label&gt
+              &ltselect id="cars" name="cars" size="4" multiple&gt
+                &ltoption value="volvo"&gtVolvo&lt/option&gt
+                &ltoption value="saab"&gtSaab&lt/option&gt
+                &ltoption value="fiat"&gtFiat&ltltoption&gt
+                &ltoption value="audi"&gtAudi&lt/option&gt
+                &lt/select&gt</p>
+                <label for="cars">Choose a car:</label>
+                  <select id="cars" name="cars" size="4" multiple> <option value="volvo">Volvo</option> <option value="saab">Saab</option> <option value="fiat">Fiat</option><option value="audi">Audi
+              </div>
+            </td>
+          </tr>
+          <tr id="option">
+            <td>&ltoption&gt&lt/option&gt</td>
+            <td>Value=</td>
+            <td>"SameAsName"</td>
+            <td>Option is used as a child in parent lists of choices that a user can select from.</td>           
+            <td>
+              <div class="tooltip"><br><p class="tooltiptext">
+              &ltform action="/action_page.php"&gt
+              &ltinput list="browsers"&gt
+              &ltdatalist id="browsers"&gt
+              &ltoption value="Internet Explorer"&gt
+              &ltoption value="Firefox"&gt
+              &ltoption value="Chrome"&gt
+              &ltoption value="Opera"&gt
+              &ltoption value="Safari"&gt
+              &lt/datalist&gt
+              &ltform&gt</p>
+                <form action="/action_page.php"> <input list="browsers"> <datalist id="browsers"> <option value="Internet Explorer"> <option value="Firefox"> <option value="Chrome"> <option value="Opera"> <option value="Safari"> </datalist> <form><br>
+              </div>  
+            </td>
+          </tr>
+          <tr id="textarea">
+            <td>&lttextarea&gt<br>&lt/textarea&gt</td>
+            <td>rows=<br>cols=<br>name=<br>placeholder=<br></td>
+            <td>"n"<br>"nn"<br>"AnythingSameAsInputID"</td>
+            <td>The text area is a box the user an type into. <br>
+              You can define how big it is and what characters are accepted and max and min amount of characters. <br>
+              Placeholder can be used to have example text visible which vanishes as user types.</td>
+            <td>
+              <div class="tooltip"><br><p class="tooltiptext">&lttextarea rows="10" cols="30" name="comment"&gt&lt/textarea&gt</p>
+              <textarea rows="10" cols="30" name="comment" placeholder="Try out placeholder here"></textarea><br><br>
+              </div>
+            </td>
+          </tr>
+          <tr id="fieldset">
+            <td>&ltfieldset&gt<br>&lt/fieldset&gt</td>
+            <td></td>
+            <td></td>
+            <td>Makes a container for form content to separate form sections. <br>
+                Followed by form code describing what kind of input the user will enter in the form.</td>
+            <td> 
+              <div class="tooltip"><br><p class="tooltiptext">&ltform action="/action_page.php"&gt
+              &ltfieldset&gt
+              &ltlabel for="fname"&gtFirst name:&lt/label&gt<br>
+              &ltinput type="text" id="fname" name="fname" value="John"&gt<br>
+              &ltlabel for="lname"&gtLast name:&lt/label&gt<br>
+              &ltinput type="text" id="lname" name="lname" value="Doe"&gt<br>
+              &ltinput type="submit" value="Submit"&gt
+              &lt/fieldset&gt
+              &lt/form&gt</p>
+                <form action="/action_page.php">
+                  <fieldset>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" value="John"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                    <input type="submit" value="Submit">
+                  </fieldset>
+                </form>
+              </div>
+            </td>
+          </tr>
+          <tr id="legend">
+            <td>&ltlegend&gt<br>&lt/legend&gt</td>
+            <td></td>
+            <td></td>
+            <td>Displays a label for the fieldset.</td>            
+            <td>
+              <div class="tooltip"><br><p class="tooltiptext">
+              &ltform action="/action_page.php"&gt
+              &ltfieldset&gt
+              &ltlegend&gtPersonal Info&lt/legend&gt
+              &ltlabel for="fname"&gtFirst name:&lt/label&gt<br>
+              &ltinput type="text" id="fname" name="fname" value="John"&gt<br>
+              &ltlabel for="lname"&gtLast name:&lt/label&gt<br>
+              &ltinput type="text" id="lname" name="lname" value="Doe"&gt<br>
+              &ltinput type="submit" value="Submit"&gt
+              &lt/fieldset&gt
+              &lt/form&gt</p>
+              <form action="/action_page.php">
+                <fieldset>
+                  <legend>Personal Info</legend>
+                  <label for="fname">First name:</label><br>
+                  <input type="text" id="fname" name="fname" value="John"><br>
+                  <label for="lname">Last name:</label><br>
+                  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                  <input type="submit" value="Submit">
+                </fieldset>
+              </form>
+              </div>
+            </td>
+          </tr>
+          <tr id="datalist">
+            <td>&ltdatalist&gt<br>&lt/datalist&gt</td>
+            <td>id=</td>
+            <td>"should match input list"</td>
+            <td>Datalist will render a dropdown list of choices for the user to select.</td>          
+            <td>
+              <div class="tooltip"><br><p class="tooltiptext">&ltform action="/action_page.php"&gt
+                &ltinput list="browsers"&gt
+                &ltdatalist id="browsers"&gt
+                &ltoption value="Internet Explorer"&gt
+                &ltoption value="Firefox"&gt
+                &ltoption value="Chrome"&gt
+                &ltoption value="Opera"&gt
+                &ltoption value="Safari"&gt
+                &lt/datalist&gt
+                &ltform&gt</p>
+              <form action="/action_page.php"> <input list="browsers"> <datalist id="browsers"> <option value="Internet Explorer"> <option value="Firefox"> <option value="Chrome"> <option value="Opera"> <option value="Safari"> </datalist> <form><br></td>
+              </div> 
+            </td>
+          </tr>
+          <tr id="button">
+            <td>&ltbutton&gt<br>&lt/button&gt</td>
+            <td>buttontype=<br>onclick=</td>
+            <td>"button"<br>"alert('Displayed onclick')"</td>
+            <td>Displays a clickable button.</td>
+            <td>
+              <div class="tooltip"><p class="tooltiptext">&ltbutton type="button" onclick="alert('Hello World!')"&gtClick Me!&lt/button&gt</p>
+              <button type="button" onclick="alert('Hello World!')">Click Me!</button><br>
+              </div>
+            </td>
+          </tr>
+          <tr id="output">
+            <td>&ltoutput&gt<br>&lt/output&gt</td>
+            <td>name=<br>for=</td>
+            <td>"x"<br>"some value from oninput="</td>
+            <td>To be used in conjuction with &ltform oninput=&gt</td>           
+            <td>
+              <div class="tooltip"><br><p class="tooltiptext">&ltform action="/action_page.php"
+              oninput="x.value=<br>parseInt(a.value)<br>+parseInt(b.value)"&gt
+              0
+              &ltinput type="range"  id="a" name="a" value="50"&gt
+              100 +
+              &ltinput type="number" id="b" name="b" value="50"&gt
+              =
+              &ltoutput name="x" for="a b">&lt/output&gt
+              &ltbr&gt&ltbr&gt
+              &ltinput type="submit"&gt
+              &ltform&gt</p>
+                <form action="/action_page.php"
+                oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                0
+                <input type="range"  id="a" name="a" value="50">
+                100 +
+                <input type="number" id="b" name="b" value="50">
+                =
+                <output name="x" for="a b"></output>
+                <br><br>
+                <input type="submit">
+                </form>
+              </div>
+            </td>          
+          </tr>
+          <tr id="optgroup">
+            <td>&ltoptgroup&gt<br>&lt/optgroup&gt</td>
+            <td>value=<br></td>
+            <td>"x"<br>"some value from oninput="</td>
+            <td>Defines a group of related options in a drop-down list in a &ltselect&gt group</td>           
+            <td>
+              <div class="tooltip"><br><p class="tooltiptext">&ltlabel for="cars"&gtChoose a car:&lt/label&gt
+                &ltselect  name="cars" id="cars"&gt
+                &ltoptgroup label="Swedish Cars"&gt
+                &ltoption value="volvo"&gtVolvo&lt/option&gt
+                &ltoption value="saab"&gtSaab&lt/option&gt
+                &lt/optgroup&gt
+                &ltoptgroup label="German Cars"&gt
+                &ltoption value="mercedes"&gtMercedes&lt/option&gt
+                &ltoption value="audi"&gtAudi&lt/option&gt
+                &lt/optgroup&gt
+                &lt/select&gt</p>
+                <label for="cars">Choose a car:</label>
+                <select  name="cars" id="cars">
+                  <optgroup label="Swedish Cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                  </optgroup>
+                  <optgroup label="German Cars">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </optgroup>
+                </select>
+              </div> 
+            </td>                      
+          </tr>
+        </tbody>           
+      </table>  
+    <h3>Key Points</h3>
+      <ul>
+        <li>Labels and IDs must be the same for ADA screenreaders.</li> 
+        <li>Names and Values must be associated with eachother for each form item completed by a user or the input will not be connected to anything on submission.</li>
+        <li>"Submit" will not work unless "action" is specified.</li>
+      </ul>
+  </body>
+</html>
